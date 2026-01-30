@@ -3,6 +3,7 @@
   Basic sketch to do minimal functionality to enable testing of power consumption
 
   (c) 2026 John Mueller / MIT License
+  https://github.com/softplus/esp32-power-test
 */
 
 /*
@@ -48,6 +49,7 @@ void setup() {
   if (TEST==7) {
     Serial.begin(9600); // open the serial port at 9600 bps:
     Serial.println("ok");
+    Serial.flush();
   }
   if (TEST==16) setCpuFrequencyMhz(160);
   if (TEST==8) setCpuFrequencyMhz(80);
@@ -76,14 +78,13 @@ void setup() {
   }
 }
 
-int state = 0;
-
 // the loop function runs over and over again forever
 void loop() {
   if (LOOP_DELAY) {
     delay(1000);
   }
   if (TEST==6) {
+    static int state = 0;
     state = 1-state;
     digitalWrite(SIGNAL_PIN, state?HIGH:LOW);
   }
