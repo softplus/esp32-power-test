@@ -18,7 +18,7 @@ Tested with boards using ESP32 C6, ESP32 S3, ESP32.
 
 Very exciting, much wow. Yes, it does very little. Most of the code is also very basic, so that it mirrors the code that might be used for your application.
 
-Requires a power measurement device like the Nordic Power Profiler II (very nice, love it). 
+Requires a power measurement device like the [Nordic Power Profiler II](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2) (very nice, love it). 
 
 Since measuring power consumption is generally sign that you're using battery power, make sure to power the board through the battery pins (or with the LDO that you plan to use).
 
